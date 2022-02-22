@@ -13,6 +13,7 @@ import { SharedService } from './shared.service';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './authentication/login/login.component';
 
 
 @NgModule({
@@ -24,6 +25,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     UserComponent,
     ShowUserComponent,
     AddEditUserComponent
+    AddEditUserComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
