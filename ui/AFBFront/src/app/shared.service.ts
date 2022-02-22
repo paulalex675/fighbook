@@ -13,42 +13,43 @@ export class SharedService {
   constructor(private http:HttpClient) { }
 
   getStyleList():Observable<any[]>{
-    return this.http.get<any[]>(this.APIURL + '/syle/');
+    return this.http.get<any[]>(this.APIURL + 'style/');
   }
 
   addStyle(val:any){
-    return this.http.post(this.APIURL + '/syle/', val);
+    return this.http.post(this.APIURL + 'style/', val);
   }
 
   updateStyle(val:any){
-    return this.http.put(this.APIURL + '/syle/', val);
+    return this.http.put(this.APIURL + 'style/', val);
   }
 
   deleteStyle(val:any){
-    return this.http.delete(this.APIURL + '/syle/' + val);
+    return this.http.delete(this.APIURL + 'style/' + val);
   }
 
   getUserList():Observable<any[]>{
-    return this.http.get<any[]>(this.APIURL + '/user/');
+    return this.http.get<any[]>(this.APIURL + 'user/');
   }
 
   addUser(val:any){
-    return this.http.post(this.APIURL + '/user/', val);
+    return this.http.post(this.APIURL + 'user/', val);
   }
 
   updateUser(val:any){
-    return this.http.put(this.APIURL + '/user/', val);
+    return this.http.put(this.APIURL + 'user/', val);
   }
 
   deleteUser(val:any){
-    return this.http.delete(this.APIURL + '/user/' + val);
+    return this.http.delete(this.APIURL + 'user/' + val);
   }
 
   UploadPhoto(val:any){
-    return this.http.post(this.APIURL + '/SaveFile', val);
+    return this.http.post(this.APIURL + 'SaveFile', val);
   }
 
+  
   getAllStyleNames():Observable<any[]>{
-    return this.http.get<any[]>(this.APIURL + '/style/');
+    return this.http.get<any[]>(this.APIURL + 'style/');
   }
 }
