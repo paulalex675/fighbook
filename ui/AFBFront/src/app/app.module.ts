@@ -24,7 +24,7 @@ import { LoginComponent } from './authentication/login/login.component';
     AddEditStyleComponent,
     UserComponent,
     ShowUserComponent,
-    AddEditUserComponent
+    AddEditUserComponent,
     AddEditUserComponent,
     LoginComponent,
   ],
@@ -33,7 +33,7 @@ import { LoginComponent } from './authentication/login/login.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [SharedService],
   bootstrap: [AppComponent]

@@ -1,1 +1,10 @@
-<p>add-edit-style works!</p>
+<div class="form-froup row">
+    <label class="col-sm-2 col-form-label">Style Name</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="StyleName" placeholder="Enter Style Name">
+    </div>
+</div>
+
+<button (click)="addStyle()" *ngIf="style.StyleId==0" class="btn btn-primary">Add</button>
+
+<button (click)="updateStyle()" *ngIf="style.StyleId!=0" class="btn btn-primary">Edit</button>
