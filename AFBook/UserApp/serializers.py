@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from UserApp.models import Users, Styles
 
-class UserSerializer(serializers.ModelSerializer):
+class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Users
         fields = ('UserId',
