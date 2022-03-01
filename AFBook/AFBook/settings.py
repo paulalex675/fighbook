@@ -32,6 +32,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = 'UserApp.User'
 
 # Application definition
 
@@ -43,9 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',
-    'UserApp.apps.UserappConfig',
-    'rest_framework',
-    'rest_framework.authtoken'
+    'UserApp',
+    'rest_framework'
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
@@ -130,6 +130,8 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 REST_FRAMEWORK = {
+    'NON_FIELD_ERRORS_KEY': 'error',
+    
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.BasicAuthentication',
         'rest_framework.authentication.SessionAuthentication',
@@ -137,7 +139,7 @@ REST_FRAMEWORK = {
     ]
 }
 
-LOGIN_REDIRECT_URL ='/'
+#LOGIN_REDIRECT_URL ='/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
